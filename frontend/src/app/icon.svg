@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="offcampus-g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4" />
+      <stop offset="0.55" stop-color="#2563EB" />
+      <stop offset="1" stop-color="#4338CA" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#offcampus-g)" />
+  <path d="M18 42L32 23L46 42" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M24 42H40" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+  <circle cx="32" cy="31" r="4" fill="#fff" />
+</svg>
