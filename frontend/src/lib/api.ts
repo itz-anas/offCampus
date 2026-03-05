@@ -1,9 +1,13 @@
 import axios from 'axios';
 
-// Always define API base properly
-const BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  'https://offcampus-ac4h.onrender.com/api';
+// Normalize API base so env values without `/api` still target backend routes.
+const rawBaseUrl =
+  process.env.NEXT_PUBLIC_API_URL || 'https://offcampus-ac4h.onrender.com';
+
+const normalizedBaseUrl = rawBaseUrl.replace(/\/+$/, '');
+const BASE_URL = normalizedBaseUrl.endsWith('/api')
+  ? normalizedBaseUrl
+  : `${normalizedBaseUrl}/api`;
 
 const api = axios.create({
   baseURL: BASE_URL,
